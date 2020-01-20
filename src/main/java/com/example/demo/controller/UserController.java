@@ -25,4 +25,14 @@ public class UserController {
         log.info(user.toString());
         return JSON.toJSONString(user);
     }
+
+    @RequestMapping("login")
+    public @ResponseBody String doLogin(User user){
+        if(user != null){
+            if("admin".equals(user.getUserName()) && "22".equals(user.getAge())){
+                return JSON.toJSONString("成功");
+            }
+        }
+        return JSON.toJSONString("失败");
+    }
 }
