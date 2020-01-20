@@ -21,7 +21,7 @@ public class UserController {
     public @ResponseBody String findUser(){
         User user = new User();
         user.setUserName("张三");
-        user.setAge(32);
+        user.setAge(22);
         log.info(user.toString());
         return JSON.toJSONString(user);
     }
